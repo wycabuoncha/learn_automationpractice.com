@@ -6,6 +6,4 @@ public class TestBase {
 	
 	//initialize the browser
 	
-	
-	
 }

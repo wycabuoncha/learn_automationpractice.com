@@ -16,17 +16,19 @@ public class PropertyManager {
 	private static final String propertyFilePath  = System.getProperty("user.dir") + "\\src\\test\\java\\resources\\configurations.properties";
 	private static String url;
 	private FileInputStream inStream;
+	private static String waitInterval;
+	
 	
 	public static PropertyManager getInstance() {
 		if(instance == null) {
-			instance = new PropertyManager();
-			instance.loadData();
+			synchronized(lock) {
+				instance = new PropertyManager();
+				instance.loadData();
+			}	
 		}
 		
 		return instance;
 	}
-
-	
 
 	   //Get all configuration data and assign to related fields.
 	private void loadData(){
@@ -39,11 +41,19 @@ public class PropertyManager {
 		}
 		
 		url = prop.getProperty("url");
+		waitInterval = prop.getProperty("wait_interval");
 		
 	}
 	
 	public String getUrl() {
 		return url;
 	}
+
+	public int getWaitInterval() {
+		
+		return Integer.parseInt(waitInterval);
+	}
+
+	
 	
 }
