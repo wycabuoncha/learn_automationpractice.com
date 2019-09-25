@@ -21,5 +21,7 @@ public class Utils {
 		WebDriverWait wait = new WebDriverWait(webDriver, timeOutInSeconds);
 		wait.until(ExpectedConditions.titleContains(text));
 	}
+    
+    
 
 }

@@ -1,28 +1,33 @@
 package autpractice.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import autpractice.util.*;
 
 public class HomePage {
 	WebDriver driver;
 	
+	 private WebDriverWait wait;
+	@FindBy(xpath = "//a[@class=\"login\"]")
+	WebElement loginLink;
+	
+	
 	public HomePage(WebDriver webdriver) {
-		this.driver = webdriver;
+		this.driver = webdriver;	
+		wait = new WebDriverWait(driver, 30);
+		PageFactory.initElements(driver, this);
 	}
 	
-	private By bestSellersBy = By.xpath("//a[text()=\"Best Sellers\"]") ;
-	private By popularBy  = By.xpath("//a[text()=\"Popular\"]");
 	
-	
-    By signIn = By.linkText("Sign in");
+	public void clickLoginLink() {
+		wait.until(ExpectedConditions.elementToBeClickable(loginLink)).click();
+	}
     
-    public WebElement getclickSignInLink() {
-        return Utils.waitForElementPresence(driver, signIn,  PropertyManager.getInstance().getWaitInterval());
-    }
-    
+   
    
 
 }
