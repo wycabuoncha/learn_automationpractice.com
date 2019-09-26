@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="autopractice.tests.HomepageTest">
+      <class name="autopractice.tests.LoginpageTest">
         <methods>
           <include name="beforeClass"/>
+          <include name="loginWithValidPassword"/>
           <include name="beforeMethod"/>
           <include name="afterClass"/>
           <include name="afterTest"/>
           <include name="beforeSuite"/>
           <include name="afterMethod"/>
-          <include name="launchApplication"/>
           <include name="afterSuite"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- autopractice.tests.HomepageTest -->
+      </class> <!-- autopractice.tests.LoginpageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

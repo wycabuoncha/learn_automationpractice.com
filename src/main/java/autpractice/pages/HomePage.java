@@ -22,7 +22,7 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	
+
 	public void clickLoginLink() {
 		wait.until(ExpectedConditions.elementToBeClickable(loginLink)).click();
 	}

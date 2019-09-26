@@ -7,18 +7,15 @@ import autpractice.util.PropertyManager;
 
 public class LoginpageTest extends BaseTest  {
 	
+			
 	
 		
-		@Test(priority=1, alwaysRun=true)
-	    public void launchApplication() {
-	        driver.get(PropertyManager.getInstance().getUrl());
-	        home = new HomePage(driver);
-	       
-	    }
-		
-		@Test(priority = 2)
+		@Test
 		public void loginWithValidPassword() {
-			
+			ExtendReportingManager("LoginPageTest.html", "LOGIN REPORT","LOGIN description");
+			 home.clickLoginLink();
+			loginPage.login("test1@automationpractice.com", "28328719@Aut?!");
+			extentReports.flush();
 		}
 	}
 
