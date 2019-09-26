@@ -15,19 +15,13 @@ import autpractice.util.PropertyManager;
 
 public class HomepageTest extends BaseTest {
 	
-     
+    
     @Test(priority=1)
     public void launchApplication() {
-    	ExtentHtmlReporter extentHtmlReporter = new ExtentHtmlReporter("./ExtentReports/homepageTest.html");
     	
-    	ExtentReports extentReports = new ExtentReports();
-    	extentReports.attachReporter(extentHtmlReporter);
-    	
-    	ExtentTest test = extentReports.createTest("Home page Test", "This test is meant to test all the functionality in the homepage");
-    	
+    	ExtendReportingManager("Ext1dfdfgfg23.html", "HOMEPAGE REPORT","my description");
     	test.log(Status.INFO, "Opening the application Url");
-        driver.get(PropertyManager.getInstance().getUrl());
-        
+    	driver.get(PropertyManager.getInstance().getUrl());
         test.pass("Successfully opened the AUT url");
         
         home = new HomePage(driver);
@@ -39,8 +33,6 @@ public class HomepageTest extends BaseTest {
 		}
         
         test.log(Status.INFO, "Clicking Signin button");
-        
-        
         home.clickLoginLink();  
         
         extentReports.flush();

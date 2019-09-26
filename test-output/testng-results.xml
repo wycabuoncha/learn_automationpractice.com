@@ -2,44 +2,44 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-26T18:42:42 EAT" name="Default suite" finished-at="2019-09-26T18:42:55 EAT" duration-ms="12892">
+  <suite started-at="2019-09-26T19:15:57 EAT" name="Default suite" finished-at="2019-09-26T19:16:10 EAT" duration-ms="13223">
     <groups>
     </groups>
-    <test started-at="2019-09-26T18:42:42 EAT" name="Default test" finished-at="2019-09-26T18:42:55 EAT" duration-ms="12892">
+    <test started-at="2019-09-26T19:15:57 EAT" name="Default test" finished-at="2019-09-26T19:16:10 EAT" duration-ms="13223">
       <class name="autopractice.tests.HomepageTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:autopractice.tests.HomepageTest@47542153]" started-at="2019-09-26T18:42:42 EAT" name="beforeSuite" finished-at="2019-09-26T18:42:42 EAT" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:autopractice.tests.HomepageTest@78aab498]" started-at="2019-09-26T19:15:57 EAT" name="beforeSuite" finished-at="2019-09-26T19:15:57 EAT" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:autopractice.tests.HomepageTest@47542153]" started-at="2019-09-26T18:42:42 EAT" name="beforeTest" finished-at="2019-09-26T18:42:42 EAT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:autopractice.tests.HomepageTest@78aab498]" started-at="2019-09-26T19:15:57 EAT" name="beforeTest" finished-at="2019-09-26T19:15:57 EAT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:autopractice.tests.HomepageTest@47542153]" started-at="2019-09-26T18:42:42 EAT" name="beforeClass" finished-at="2019-09-26T18:42:42 EAT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:autopractice.tests.HomepageTest@78aab498]" started-at="2019-09-26T19:15:57 EAT" name="beforeClass" finished-at="2019-09-26T19:16:02 EAT" duration-ms="5620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:autopractice.tests.HomepageTest@47542153]" started-at="2019-09-26T18:42:42 EAT" name="beforeMethod" finished-at="2019-09-26T18:42:48 EAT" duration-ms="5565" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:autopractice.tests.HomepageTest@78aab498]" started-at="2019-09-26T19:16:02 EAT" name="beforeMethod" finished-at="2019-09-26T19:16:02 EAT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="launchApplication()[pri:1, instance:autopractice.tests.HomepageTest@47542153]" started-at="2019-09-26T18:42:48 EAT" name="launchApplication" finished-at="2019-09-26T18:42:54 EAT" duration-ms="6688" status="PASS">
+        <test-method signature="launchApplication()[pri:1, instance:autopractice.tests.HomepageTest@78aab498]" started-at="2019-09-26T19:16:02 EAT" name="launchApplication" finished-at="2019-09-26T19:16:09 EAT" duration-ms="6957" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:autopractice.tests.HomepageTest@47542153]" started-at="2019-09-26T18:42:54 EAT" name="afterMethod" finished-at="2019-09-26T18:42:55 EAT" duration-ms="614" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:autopractice.tests.HomepageTest@78aab498]" started-at="2019-09-26T19:16:09 EAT" name="afterMethod" finished-at="2019-09-26T19:16:09 EAT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:autopractice.tests.HomepageTest@47542153]" started-at="2019-09-26T18:42:55 EAT" name="afterClass" finished-at="2019-09-26T18:42:55 EAT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:autopractice.tests.HomepageTest@78aab498]" started-at="2019-09-26T19:16:09 EAT" name="afterClass" finished-at="2019-09-26T19:16:10 EAT" duration-ms="619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:autopractice.tests.HomepageTest@47542153]" started-at="2019-09-26T18:42:55 EAT" name="afterTest" finished-at="2019-09-26T18:42:55 EAT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:autopractice.tests.HomepageTest@78aab498]" started-at="2019-09-26T19:16:10 EAT" name="afterTest" finished-at="2019-09-26T19:16:10 EAT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:autopractice.tests.HomepageTest@47542153]" started-at="2019-09-26T18:42:55 EAT" name="afterSuite" finished-at="2019-09-26T18:42:55 EAT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:autopractice.tests.HomepageTest@78aab498]" started-at="2019-09-26T19:16:10 EAT" name="afterSuite" finished-at="2019-09-26T19:16:10 EAT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
