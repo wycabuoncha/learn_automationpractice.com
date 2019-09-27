@@ -1,6 +1,7 @@
 package autopractice.tests;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -29,7 +30,8 @@ public class BaseTest {
     ExtentReports extentReports = new ExtentReports();
     ExtentTest test;
     HomePage home;
-    LoginPage loginPage; 
+    LoginPage loginPage;
+	private WebDriverWait wait; 
    
  
     
@@ -52,6 +54,7 @@ public class BaseTest {
     	 driver.get(PropertyManager.getInstance().getUrl());
     	 home = new HomePage(driver);
     	 loginPage = new LoginPage(driver);
+    	
     }
 
     @AfterClass

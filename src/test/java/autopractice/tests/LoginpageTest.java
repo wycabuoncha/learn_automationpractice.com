@@ -1,20 +1,17 @@
 package autopractice.tests;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import autpractice.pages.HomePage;
-import autpractice.util.PropertyManager;
 
 public class LoginpageTest extends BaseTest  {
-	
-			
-	
 		
 		@Test
-		public void loginWithValidPassword() {
+		@Parameters({ "correctUsername", "correctPassword" })
+		public void loginWithValidPassword(String username, String password) {
 			ExtendReportingManager("LoginPageTest.html", "LOGIN REPORT","LOGIN description");
 			 home.clickLoginLink();
-			loginPage.login("test1@automationpractice.com", "28328719@Aut?!");
+			loginPage.login(username, password);
 			extentReports.flush();
 		}
 	}
