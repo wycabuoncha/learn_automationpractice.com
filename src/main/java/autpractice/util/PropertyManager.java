@@ -16,6 +16,7 @@ public class PropertyManager {
 	private static final String propertyFilePath  = System.getProperty("user.dir") + "\\src\\test\\java\\resources\\configurations.properties";
 	private static String url;
 	private FileInputStream inStream;
+	private static String time;
 	private static String waitInterval;
 	
 	
@@ -40,13 +41,19 @@ public class PropertyManager {
 			System.out.println("Configuration properties file cannot be found");
 		}
 		
+		
 		url = prop.getProperty("url");
 		waitInterval = prop.getProperty("wait_interval");
+		time = prop.getProperty("implicityWaittime");
 		
 	}
 	
 	public String getUrl() {
 		return url;
+	}
+	
+	public int getImplicitWaitTime() {
+		return Integer.parseInt(time);
 	}
 
 	public int getWaitInterval() {

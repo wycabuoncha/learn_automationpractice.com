@@ -10,19 +10,19 @@
     <parameter name="inCorrectPassword" value="243544657@efg"/>
     <parameter name="invalidEmail" value="test212@automationpractice.com"/>
     <classes>
-      <class name="autopractice.tests.LoginpageTest">
+      <class name="autopractice.tests.userAuthentication.SignuppageTest">
         <methods>
-          <include name="beforeClass"/>
-          <include name="loginWithValidPassword" invocation-numbers="0"/>
+          <include name="launchBrowser"/>
           <include name="beforeMethod"/>
+          <include name="terminateBrowser"/>
           <include name="afterClass"/>
           <include name="afterTest"/>
           <include name="beforeSuite"/>
+          <include name="openAuthenticationPage"/>
           <include name="afterMethod"/>
           <include name="afterSuite"/>
-          <include name="beforeTest"/>
         </methods>
-      </class> <!-- autopractice.tests.LoginpageTest -->
+      </class> <!-- autopractice.tests.userAuthentication.SignuppageTest -->
     </classes>
   </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [Authentication] -->

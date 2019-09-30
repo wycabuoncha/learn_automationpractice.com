@@ -9,7 +9,9 @@
 	<parameter name="invalidEmail" value ="test212@automationpractice.com" />
 	<parameter name="inCorrectPassword" value="243544657@efg"/>
         <classes>
-            <class name="autopractice.tests.LoginpageTest"/>
+           
+            <class name="autopractice.tests.userAuthentication.SignuppageTest"/>
+  
         </classes>
         
     </test>

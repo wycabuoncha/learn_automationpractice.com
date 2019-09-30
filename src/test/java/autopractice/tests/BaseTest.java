@@ -1,5 +1,7 @@
 package autopractice.tests;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -15,6 +17,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
+import autpractice.pages.AuthenticationPage;
 import autpractice.pages.HomePage;
 import autpractice.pages.LoginPage;
 import autpractice.util.DriverManager;
@@ -27,10 +30,10 @@ public class BaseTest {
     WebDriver driver;
   
     ExtentHtmlReporter extentHtmlReporter;
-    ExtentReports extentReports = new ExtentReports();
+    protected ExtentReports extentReports = new ExtentReports();
     ExtentTest test;
-    HomePage home;
-    LoginPage loginPage;
+    protected HomePage home;
+    protected AuthenticationPage authenticationPage;
 	private WebDriverWait wait; 
    
  
@@ -42,28 +45,31 @@ public class BaseTest {
 	}
        
     @BeforeTest
-    public void beforeTest() {
+    public void launchBrowser() {
   	  driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
-  	  
+	  	 driver = driverManager.getDriver();
+	  	 driver.manage().timeouts().implicitlyWait(PropertyManager.getInstance().getImplicitWaitTime(), TimeUnit.SECONDS);
+		 driver.get(PropertyManager.getInstance().getUrl());
+		 driver.manage().window().maximize();
+
+		 home = new HomePage(driver);
+		 authenticationPage = new AuthenticationPage(driver);
     }
-    
-    
+
     @BeforeClass
-    public void beforeClass() {
-    	 driver = driverManager.getDriver();
-    	 driver.get(PropertyManager.getInstance().getUrl());
-    	 home = new HomePage(driver);
-    	 loginPage = new LoginPage(driver);
+    public void terminateBrowser() {
+    	
     	
     }
 
     @AfterClass
     public void afterClass() {
-    	 driverManager.quitDriver();
+    	
     }
 
     @AfterTest
     public void afterTest() {
+    	 driverManager.quitDriver();
     }
     
     @BeforeMethod

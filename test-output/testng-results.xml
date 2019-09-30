@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-27T19:10:21 EAT" name="Authentication" finished-at="2019-09-27T19:10:38 EAT" duration-ms="16735">
+  <suite started-at="2019-09-30T18:47:41 EAT" name="Authentication" finished-at="2019-09-30T18:47:59 EAT" duration-ms="18452">
     <groups>
     </groups>
-    <test started-at="2019-09-27T19:10:21 EAT" name="LoginTest" finished-at="2019-09-27T19:10:38 EAT" duration-ms="16735">
-      <class name="autopractice.tests.LoginpageTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:autopractice.tests.LoginpageTest@12e61fe6]" started-at="2019-09-27T19:10:21 EAT" name="beforeSuite" finished-at="2019-09-27T19:10:21 EAT" duration-ms="8" status="PASS">
+    <test started-at="2019-09-30T18:47:41 EAT" name="LoginTest" finished-at="2019-09-30T18:47:59 EAT" duration-ms="18452">
+      <class name="autopractice.tests.userAuthentication.SignuppageTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:41 EAT" name="beforeSuite" finished-at="2019-09-30T18:47:41 EAT" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:autopractice.tests.LoginpageTest@12e61fe6]" started-at="2019-09-27T19:10:21 EAT" name="beforeTest" finished-at="2019-09-27T19:10:21 EAT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:41 EAT" name="launchBrowser" finished-at="2019-09-30T18:47:57 EAT" duration-ms="15853" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:autopractice.tests.LoginpageTest@12e61fe6]" started-at="2019-09-27T19:10:21 EAT" name="beforeClass" finished-at="2019-09-27T19:10:33 EAT" duration-ms="11753" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:57 EAT" name="terminateBrowser" finished-at="2019-09-30T18:47:57 EAT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:autopractice.tests.LoginpageTest@12e61fe6]" started-at="2019-09-27T19:10:33 EAT" name="beforeMethod" finished-at="2019-09-27T19:10:33 EAT" duration-ms="0" status="PASS">
+        </test-method> <!-- terminateBrowser -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:57 EAT" name="beforeMethod" finished-at="2019-09-30T18:47:57 EAT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginWithValidPassword(java.lang.String, java.lang.String)[pri:0, instance:autopractice.tests.LoginpageTest@12e61fe6]" started-at="2019-09-27T19:10:33 EAT" name="loginWithValidPassword" finished-at="2019-09-27T19:10:37 EAT" duration-ms="4353" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test1@automationpractice.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[28328719@Aut?!]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="openAuthenticationPage()[pri:1, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:57 EAT" name="openAuthenticationPage" finished-at="2019-09-30T18:47:59 EAT" duration-ms="1967" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithValidPassword -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:autopractice.tests.LoginpageTest@12e61fe6]" started-at="2019-09-27T19:10:37 EAT" name="afterMethod" finished-at="2019-09-27T19:10:37 EAT" duration-ms="0" status="PASS">
+        </test-method> <!-- openAuthenticationPage -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:59 EAT" name="afterMethod" finished-at="2019-09-30T18:47:59 EAT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:autopractice.tests.LoginpageTest@12e61fe6]" started-at="2019-09-27T19:10:37 EAT" name="afterClass" finished-at="2019-09-27T19:10:38 EAT" duration-ms="603" status="PASS">
+        <test-method signature="signupUsingValidUnregisteredEmail()[pri:2, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:59 EAT" name="signupUsingValidUnregisteredEmail" finished-at="2019-09-30T18:47:59 EAT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupUsingValidUnregisteredEmail -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:59 EAT" name="beforeMethod" finished-at="2019-09-30T18:47:59 EAT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:59 EAT" name="afterMethod" finished-at="2019-09-30T18:47:59 EAT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:59 EAT" name="afterClass" finished-at="2019-09-30T18:47:59 EAT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:autopractice.tests.LoginpageTest@12e61fe6]" started-at="2019-09-27T19:10:38 EAT" name="afterTest" finished-at="2019-09-27T19:10:38 EAT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:59 EAT" name="afterTest" finished-at="2019-09-30T18:47:59 EAT" duration-ms="604" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:autopractice.tests.LoginpageTest@12e61fe6]" started-at="2019-09-27T19:10:38 EAT" name="afterSuite" finished-at="2019-09-27T19:10:38 EAT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:autopractice.tests.userAuthentication.SignuppageTest@12e61fe6]" started-at="2019-09-30T18:47:59 EAT" name="afterSuite" finished-at="2019-09-30T18:47:59 EAT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- autopractice.tests.LoginpageTest -->
+      </class> <!-- autopractice.tests.userAuthentication.SignuppageTest -->
     </test> <!-- LoginTest -->
   </suite> <!-- Authentication -->
 </testng-results>
