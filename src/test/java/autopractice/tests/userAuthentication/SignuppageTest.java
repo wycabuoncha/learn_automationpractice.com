@@ -1,8 +1,11 @@
 package autopractice.tests.userAuthentication;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
 import autopractice.tests.BaseTest;
+import autpractice.pages.SignupPage;
 
 
 
@@ -15,13 +18,21 @@ public class SignuppageTest extends BaseTest {
 		home.clickLoginLink();
 	}
 	
+	
+	@Test(priority = 2)
+	public void signupWithValidRegisteredEmailAddress() {
+		authenticationPage.enterEmailAddressToCreateAccount("onchari@myspace.com");
+		Assert.assertEquals(signupPage.getPageTitle(), "Login - My Store");
+	}
+	
+	
 	//@Test(priority = 2)
 	public void regUsingInvalidEmailFormat() {
 		System.out.println("");
-		//authenticationPage.enterEmailAddressToCreateAccount("dddddddd@ffffff.com");
+		//authenticationPage.enterEmailAddressToCreateAccount("onchari@myspace.com");
 	}
 	
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void signupUsingValidUnregisteredEmail() {
 		System.out.println("WHOOOPS");
 	}

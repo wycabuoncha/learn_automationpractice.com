@@ -7,10 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AuthenticationPage {
+import autpractice.base.TestBase;
+
+public class AuthenticationPage extends TestBase {
 
 	WebDriverWait wait;
-	WebDriver driver;
+	protected WebDriver driver;
 	
 	//locators for : error login, email input, create account button, valid email
 	@FindBy(xpath = "//li[contains(text(), \"Invalid email address.\")]")
@@ -87,12 +89,19 @@ public class AuthenticationPage {
 	//=============GETS===================
 	
    //Create An Account
-   public void enterEmailAddressToCreateAccount(String email) {
+   public SignupPage enterEmailAddressToCreateAccount(String email) {
 		wait.until(ExpectedConditions.visibilityOf(emailCreate)).sendKeys(email);
 		wait.until(ExpectedConditions.elementToBeClickable(createAccount)).click();
+		
+		return new SignupPage(driver);
+		
 	}
 	
-   //Login
+   
+
+  
+
+//Login
 	public void alreadyReisteredLogin(String username, String password) {
 		wait.until(ExpectedConditions.visibilityOf(emailAddressField)).sendKeys(username);
 		wait.until(ExpectedConditions.visibilityOf(passwordField)).sendKeys(password);

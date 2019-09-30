@@ -23,8 +23,9 @@ public class HomePage {
 	}
 	
 
-	public void clickLoginLink() {
+	public AuthenticationPage clickLoginLink() {
 		wait.until(ExpectedConditions.elementToBeClickable(loginLink)).click();
+		return new AuthenticationPage(driver);
 	}
     
    
