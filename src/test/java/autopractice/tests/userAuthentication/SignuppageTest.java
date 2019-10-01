@@ -2,10 +2,8 @@ package autopractice.tests.userAuthentication;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 
 import autopractice.tests.BaseTest;
-import autpractice.pages.SignupPage;
 
 
 
@@ -23,6 +21,34 @@ public class SignuppageTest extends BaseTest {
 	public void signupWithValidRegisteredEmailAddress() {
 		authenticationPage.enterEmailAddressToCreateAccount("onchari@myspace.com");
 		Assert.assertEquals(signupPage.getPageTitle(), "Login - My Store");
+	}
+	
+	@Test(priority = 3)
+	public void  fillInPersonalInfoFields() {
+		//Title
+		
+		//First name
+		//Last name
+		//email address
+		//Date of Birth
+		//Sign up for our newsletter!
+		//Receive special offers from our partners!
+		
+		//ADDRESS
+		//First name *
+		//Last name *
+		//Company
+		//Address *
+		//Address (Line 2)
+		//City *
+		//State *
+		//Zip/Postal Code *
+
+		//Country *
+		//Additional information
+		//Home phone
+		//Mobile phone *
+		// Assign an address alias for future reference. *
 	}
 	
 	
