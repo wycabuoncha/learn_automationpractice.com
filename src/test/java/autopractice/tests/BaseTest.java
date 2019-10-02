@@ -32,7 +32,6 @@ public class BaseTest {
     protected HomePage home;
     public SignupPage signupPage;
     protected AuthenticationPage authenticationPage;
-	private WebDriverWait wait; 
    
  
     
@@ -46,7 +45,6 @@ public class BaseTest {
     public void launchBrowser() {
   	  driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
 	  	 driver = driverManager.getDriver();
-	  	 //driver.manage().timeouts().implicitlyWait(PropertyManager.getInstance().getImplicitWaitTime(), TimeUnit.SECONDS);
 		 driver.get(PropertyManager.getInstance().getUrl());
 		 driver.manage().window().maximize();
 

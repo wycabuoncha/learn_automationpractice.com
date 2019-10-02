@@ -1,10 +1,13 @@
 package autpractice.pages;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -27,6 +30,16 @@ public class SignupPage  {
 	
 	@FindBy(id = "passwd") 	WebElement password;
 	
+	@FindBy(id = "days") WebElement birthDay;
+	
+	@FindBy(id = "months") WebElement birthMonth;
+	
+	@FindBy(id = "years") WebElement birthYear;
+	
+	@FindBy(xpath = "//input[@id =\"newsletter\"]" ) WebElement newsletter;
+	
+	@FindBy(xpath = "//input[@id =\"optin\"]") WebElement specialOffer;
+	
 	@FindBy(id = "firstname") WebElement firstname;
 	
 	@FindBy(id = "lastname") WebElement lastname;
@@ -39,36 +52,28 @@ public class SignupPage  {
 	
 	@FindBy(id = "city") WebElement city;
 	
+	@FindBy(xpath ="//select[@id =\"id_state\"]" ) WebElement state;
+	
 	@FindBy(id = "postcode") WebElement postcode;
+	
+	@FindBy(xpath = "//select[@id= \"id_country\"]/option[@value =\"21\"]") WebElement country;
 	
 	@FindBy(id="other") WebElement other;
 	
-	@FindBy(id = "phone") WebElement phone;
+	@FindBy(id = "phone") WebElement homePhone;
 	
-	@FindBy(id = "phone_mobile") WebElement phoneMobile;
+	@FindBy(id = "phone_mobile") WebElement mobilePhone;
 	
 	@FindBy(id = "submitAccount") WebElement submitAccount;
 	
-	@FindBy(id = "days") WebElement birthDay;
-	
-	@FindBy(id = "months") WebElement birthMonth;
-	
-	@FindBy(id = "years") WebElement birthYear;
-	
-	@FindBy(id = "id_state") WebElement state;
-	
-	@FindBy(id = "id_country") WebElement country;
 
+	@FindBy(id ="alias") WebElement alias;
 	
 	
 	public SignupPage(WebDriver webdriver) {
 		this.driver = webdriver;
 		wait  = new WebDriverWait(driver, 30);
-	}
-	
-	
-	public void test() {
-		System.out.println("TEST");
+		PageFactory.initElements(driver, this);
 	}
 	
 	public WebElement getSignupForm() {
@@ -87,6 +92,9 @@ public class SignupPage  {
 		return driver.getTitle();
 	}
 	
+	public WebElement isElementVisible(WebElement element) {
+		return wait.until(ExpectedConditions.visibilityOf(element));
+	}
 	
 	
 	//-----GETTERS---------------
@@ -117,21 +125,44 @@ public class SignupPage  {
 		return isElementVisible(password);
 	}
 	
-	public WebElement lastname() {
+	
+	public Select selectCustomerDateOfBirthDay() {
+		WebElement element = isElementVisible(birthDay);
+		return new Select(element);
+	}
+	
+	
+	public Select selectCustomerMonthOfBirthDay() {
+		WebElement element = isElementVisible(birthMonth);
+		return new Select(element);
+	}
+	
+	public Select selectCustomerYearOfBirthDay() {
+		WebElement element = isElementVisible(birthYear);
+		return new Select(element);
+	}
+	
+	public WebElement getNewsLetter() {
+		return isElementVisible(newsletter);
+	}
+	
+	public WebElement specialOffer() {
+		return isElementVisible(specialOffer);
+	}
+	
+	public WebElement getlastname() {
 		return isElementVisible(lastname);
 	}
 	
 	public WebElement getfirstname() {
 		return isElementVisible(lastname);
 	}
-	
-	
 
 	public WebElement getCompany() {
 		return  isElementVisible(company);
 	}
 	
-	
+
 	public WebElement getAddress1() {
 		return isElementVisible(address1);
 	}
@@ -144,35 +175,83 @@ public class SignupPage  {
 		return isElementVisible(city);
 	}
 	
-	public WebElement isElementVisible(WebElement element) {
-		return wait.until(ExpectedConditions.visibilityOf(element));
+	public Select selectState() {
+		WebElement element = isElementVisible(state);
+		return new Select(element);
 	}
+	
+	
 	
 	public WebElement getPostCode() {
 		return isElementVisible(postcode);
 	}
 	
-	public WebElement getPhone() {
-		return isElementVisible(phone);
+	
+	
+	public WebElement getHomePhone() {
+		return isElementVisible(homePhone);
 	}
 	
-	public WebElement getPhoneMobile() {
-		return isElementVisible(phoneMobile);
+	public WebElement getMobilePhone() {
+		return isElementVisible(mobilePhone);
 	}
 	
 	public WebElement getOther() {
 		return isElementVisible(other);
 	}
 	
+	public WebElement getAlias() {
+		return isElementVisible(alias);
+	}
+	
 	public WebElement getSubmitButton() {
 		return wait.until(ExpectedConditions.elementToBeClickable(submitAccount));
 	}
 	
+	// -------SETTERS
+	
+	public void setCustomerDayOfBirthDay(String day) {
+		Select select  = this.selectCustomerDateOfBirthDay();
+		select.selectByValue(day);	
+	}
+	
+	public void setCustomerMonthOfBirthDay(String month) {
+		Select select = selectCustomerMonthOfBirthDay();
+		select.selectByValue(month);
+	}
+	
+	public void setCustomerYearOfBirthDay(String year) {
+		Select select = selectCustomerYearOfBirthDay();
+		select.selectByValue(year);
+	}
 	
 	
-	public void signup() {
+
+	    public void selectState(String state) {
+	        Select selectState = this.selectState();
+	        selectState.selectByValue(state);
+	    }
+	
+	public void setCountry() {
+		WebElement element = isElementVisible(country);
+		if(isElementAlreadySelected(element)) {
+			System.out.println("United States is already selected");
+		}
 		
 	}
+	
+	public boolean isElementAlreadySelected(WebElement element) {
+		boolean selected = false;
+		if(element.isSelected()) {
+		 selected = true;
+		}
+		return selected;
+	}
+	
+	
+	
+
+	
 	
 	
 			//First name
