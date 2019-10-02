@@ -13,8 +13,8 @@
       <class name="autopractice.tests.userAuthentication.SignuppageTest">
         <methods>
           <include name="launchBrowser"/>
+          <include name="signupForm"/>
           <include name="beforeMethod"/>
-          <include name="fillInPersonalInfoFields"/>
           <include name="terminateBrowser"/>
           <include name="afterClass"/>
           <include name="afterTest"/>

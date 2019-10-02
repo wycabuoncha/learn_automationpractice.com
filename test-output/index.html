@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Authentication" class="navigator-link">
-              <span class="suite-name border-passed">Authentication</span>
+              <span class="suite-name border-failed">Authentication</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Authentication" class="hide-methods failed suite-Authentication"> (hide)</a> <!-- hide-methods failed suite-Authentication -->
+                      <a href="#" panel-name="suite-Authentication" class="show-methods failed suite-Authentication"> (show)</a> <!-- show-methods failed suite-Authentication -->
+                    </span>
+                    <div class="method-list-content failed suite-Authentication">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Authentication" title="autopractice.tests.userAuthentication.SignuppageTest" class="method navigator-link" hash-for-method="signupForm">signupForm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Authentication -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,6 +136,36 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Authentication" class="panel Authentication">
+          <div class="suite-Authentication-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">autopractice.tests.userAuthentication.SignuppageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signupForm">
+                  </a> <!-- signupForm -->
+                  <span class="method-name">signupForm</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (5cd02078fa5eb8b5f11636e85fec02dc)] -&gt; id: days] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-377NK29&apos;, ip: &apos;192.168.5.149&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\ONCHAR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51482}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5cd02078fa5eb8b5f11636e85fec02dc
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at autpractice.pages.SignupPage.isElementVisible(SignupPage.java:96)
+	at autpractice.pages.SignupPage.selectCustomerDateOfBirthDay(SignupPage.java:130)
+	at autpractice.pages.SignupPage.setCustomerDayOfBirthDay(SignupPage.java:214)
+	at autopractice.tests.userAuthentication.SignuppageTest.signupForm(SignuppageTest.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Authentication-class-failed -->
           <div class="suite-Authentication-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -203,20 +247,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'signupWithValidRegisteredEmailAddress')
+data.setCell(0, 1, 'signupForm')
 data.setCell(0, 2, 'autopractice.tests.userAuthentication.SignuppageTest')
-data.setCell(0, 3, 20257);
+data.setCell(0, 3, 33153);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'openAuthenticationPage')
 data.setCell(1, 2, 'autopractice.tests.userAuthentication.SignuppageTest')
-data.setCell(1, 3, 2229);
+data.setCell(1, 3, 4023);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'signupWithValidRegisteredEmailAddress')
+data.setCell(2, 2, 'autopractice.tests.userAuthentication.SignuppageTest')
+data.setCell(2, 3, 255);
 window.suiteTableData['Authentication']= { tableData: data, tableDiv: 'times-div-Authentication'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 37 seconds</span>
               <div id="times-div-Authentication">
               </div> <!-- times-div-Authentication -->
             </div> <!-- times-div -->
@@ -249,47 +297,61 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">launchBrowser</span>
-                <span class="method-start">10 ms</span>
+                <span class="method-start">11 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">terminateBrowser</span>
-                <span class="method-start">18406 ms</span>
+                <span class="method-start">15023 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">18487 ms</span>
+                <span class="method-start">15109 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">openAuthenticationPage</span>
-                <span class="method-start">18488 ms</span>
+                <span class="method-start">15110 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">20719 ms</span>
+                <span class="method-start">19135 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">20721 ms</span>
+                <span class="method-start">19137 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">signupWithValidRegisteredEmailAddress</span>
-                <span class="method-start">20721 ms</span>
+                <span class="method-start">19137 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">40980 ms</span>
+                <span class="method-start">19393 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">19394 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">signupForm</span>
+                <span class="method-start">19394 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">52549 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">40980 ms</span>
+                <span class="method-start">52550 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">41193 ms</span>
+                <span class="method-start">52724 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">41822 ms</span>
+                <span class="method-start">53360 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
