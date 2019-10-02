@@ -2,12 +2,7 @@ package autopractice.tests.userAuthentication;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
-
 import autopractice.tests.BaseTest;
-import autpractice.pages.SignupPage;
-
-
 
 public class SignuppageTest extends BaseTest {
 
@@ -20,24 +15,14 @@ public class SignuppageTest extends BaseTest {
 	
 	
 	@Test(priority = 2)
-	public void signupWithValidRegisteredEmailAddress() {
-		authenticationPage.enterEmailAddressToCreateAccount("onchari@myspace.com");
+	public void signupWithValidRegisteredEmailAddress() throws InterruptedException {
+		authenticationPage.enterEmailAddressToCreateAccount("onchabri@myspace.com");
 		Assert.assertEquals(signupPage.getPageTitle(), "Login - My Store");
+		
+		Thread.sleep(20000);
 	}
 	
 	
-	//@Test(priority = 2)
-	public void regUsingInvalidEmailFormat() {
-		System.out.println("");
-		//authenticationPage.enterEmailAddressToCreateAccount("onchari@myspace.com");
-	}
 	
-	//@Test(priority = 2)
-	public void signupUsingValidUnregisteredEmail() {
-		System.out.println("WHOOOPS");
-	}
-	//regUsingValidEmail
 	
-	//registerWithBlankInput
-	//backToHomepage
 }

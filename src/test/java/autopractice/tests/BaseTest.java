@@ -24,7 +24,7 @@ import autpractice.util.PropertyManager;
 
 public class BaseTest {
 	DriverManager driverManager;
-    WebDriver driver;
+    public WebDriver driver;
   
     ExtentHtmlReporter extentHtmlReporter;
     protected ExtentReports extentReports = new ExtentReports();

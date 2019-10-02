@@ -92,15 +92,9 @@ public class AuthenticationPage extends TestBase {
    public SignupPage enterEmailAddressToCreateAccount(String email) {
 		wait.until(ExpectedConditions.visibilityOf(emailCreate)).sendKeys(email);
 		wait.until(ExpectedConditions.elementToBeClickable(createAccount)).click();
-		
-		return new SignupPage(driver);
-		
+		return new SignupPage(driver);	
 	}
 	
-   
-
-  
-
 //Login
 	public void alreadyReisteredLogin(String username, String password) {
 		wait.until(ExpectedConditions.visibilityOf(emailAddressField)).sendKeys(username);
