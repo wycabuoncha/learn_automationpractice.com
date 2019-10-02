@@ -1,9 +1,5 @@
 package autopractice.tests;
-
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.NewSessionPayload;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -20,7 +16,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import autpractice.pages.AuthenticationPage;
 import autpractice.pages.HomePage;
-import autpractice.pages.LoginPage;
 import autpractice.pages.SignupPage;
 import autpractice.util.DriverManager;
 import autpractice.util.DriverManagerFactory;
@@ -61,15 +56,8 @@ public class BaseTest {
     }
 
     @BeforeClass
-    public void terminateBrowser() {
-    	Object cObject = new Object();
-    	String nameString = cObject.getClass().getName();
-    	ExtendReportingManager(nameString +".html", nameString + " REPORT","Wmy description");
-    	
-  
-  
-        
-       
+    public void terminateBrowser() { 	
+    	ExtendReportingManager("REPORTNAME.html",  " REPORT HEADER","REPORT description");       
     }
 
     @AfterClass
