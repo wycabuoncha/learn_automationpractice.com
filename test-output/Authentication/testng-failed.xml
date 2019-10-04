@@ -19,6 +19,8 @@
           <include name="afterClass"/>
           <include name="afterTest"/>
           <include name="beforeSuite"/>
+          <include name="openAuthenticationPage"/>
+          <include name="signupWithValidRegisteredEmailAddress"/>
           <include name="afterMethod"/>
           <include name="afterSuite"/>
         </methods>

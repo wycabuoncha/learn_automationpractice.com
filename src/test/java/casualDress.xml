@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="WomenDresses" parallel="false">
+
+    <test name="Dress">
+  
+        <classes>
+           
+            <class name="autopractice.tests.dresses.CasualDressTest"/>
+  
+        </classes>
+        
+    </test>
+    
+</suite>

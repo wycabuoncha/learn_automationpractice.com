@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import autpractice.util.Utils;
 
 
 public class SignupPage  {
@@ -126,21 +127,7 @@ public class SignupPage  {
 	}
 	
 	
-	public Select selectCustomerDateOfBirthDay() {
-		WebElement element = isElementVisible(birthDay);
-		return new Select(element);
-	}
-	
-	
-	public Select selectCustomerMonthOfBirthDay() {
-		WebElement element = isElementVisible(birthMonth);
-		return new Select(element);
-	}
-	
-	public Select selectCustomerYearOfBirthDay() {
-		WebElement element = isElementVisible(birthYear);
-		return new Select(element);
-	}
+
 	
 	public WebElement getNewsLetter() {
 		return isElementVisible(newsletter);
@@ -210,20 +197,21 @@ public class SignupPage  {
 	
 	// -------SETTERS
 	
-	public void setCustomerDayOfBirthDay(String day) {
-		Select select  = this.selectCustomerDateOfBirthDay();
-		select.selectByValue(day);	
+	//DATE OF BIRTH 
+	public void selectCustomerDateOfBirthDay()
+	{	
+		WebElement element = wait.until(ExpectedConditions.visibilityOf(birthDay));
+		Select select = new Select(element);
+		select.selectByValue("12");
+	      
 	}
-	
-	public void setCustomerMonthOfBirthDay(String month) {
-		Select select = selectCustomerMonthOfBirthDay();
-		select.selectByValue(month);
-	}
-	
-	public void setCustomerYearOfBirthDay(String year) {
-		Select select = selectCustomerYearOfBirthDay();
-		select.selectByValue(year);
-	}
+
+	/*
+	 * public Select selectCustomerMonthOfBirth() { return new
+	 * Select(Utils.waitForElementPresence(driver,birthMonth,30)); } public Select
+	 * selectCustomerDateOfBirthYear() { return new
+	 * Select(Utils.waitForElementPresence(driver,birthYear,30)); }
+	 */
 	
 	
 

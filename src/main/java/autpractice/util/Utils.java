@@ -16,6 +16,7 @@ public class Utils {
         return  (new WebDriverWait(driver, waitInterval)).until(ExpectedConditions.elementToBeClickable(selector));
 
     }
+	
     public static WebElement waitForElementPresence(WebDriver driver, By selector, int waitInterval) {
         return  (new WebDriverWait(driver, waitInterval)).until(ExpectedConditions.presenceOfElementLocated(selector));
 
